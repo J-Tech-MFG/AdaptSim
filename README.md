@@ -259,6 +259,21 @@ This allows builders to import and modify the designs in virtually any CAD softw
 
 ---
 
+## Opening the Project
+
+This repository intentionally omits some STM32CubeIDE workspace metadata files.
+
+To open the project:
+
+1. Open `AdaptSim_STM32.ioc` in STM32CubeMX
+2. Generate code
+3. Open the generated project in STM32CubeIDE
+4. Build and flash
+
+All required source code is included in this repository.
+
+---
+
 # Credits
 
 ## Pedal Design Inspiration
