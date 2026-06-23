@@ -70,8 +70,7 @@ If you have different bearings, springs, fasteners, sensors, or materials, modif
 ## H-Pattern Shifter
 
 - Fully custom CAD design
-- Magnetic centering mechanism
-- Reverse lockout
+- Spring centering mechanism
 - Limit switch gear detection
 - Serviceable design
 
