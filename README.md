@@ -274,6 +274,21 @@ All required source code is included in this repository.
 
 ---
 
+## SimHub Integration
+
+This project includes optional SimHub-powered accessories:
+
+- Pedal rumble feedback using Xbox controller rumble motors
+- Wind simulation using dual PWM fans
+
+Both systems use Arduino Pro Micro boards running firmware generated directly by SimHub.
+
+No custom Arduino firmware is required.
+
+See the Docs folder for setup instructions and wiring information.
+
+---
+
 # Credits
 
 ## Pedal Design Inspiration
