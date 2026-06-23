@@ -2,7 +2,7 @@
 
 ### A modular DIY direct drive sim racing ecosystem built from accessible parts, custom CAD, and open-source hardware.
 
-![Rig Overview](Docs/Photos/Rig/DIY_Sim_Rig.jpeg)
+![Rig Overview](Docs/Photos/Rig/Rig_Overview.jpg)
 
 ![RJ45 Controller](Docs/Photos/Electronics/STM32_Hub.jpeg)
 
