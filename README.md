@@ -2,7 +2,10 @@
 
 ### A modular DIY direct drive sim racing ecosystem built from accessible parts, custom CAD, and open-source hardware.
 
-![Rig Overview](Docs/Photos/Rig/Rig-Front.jpg)
+![Rig Overview](Docs/Photos/Rig/DIY_Sim_Rig.jpeg)
+
+![RJ45 Controller](Docs/Photos/Electronics/STM32_Hub.jpeg)
+
 
 ![License](https://img.shields.io/github/license/J-Tech-MFG/AdaptSim)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
@@ -92,7 +95,7 @@ If you have different bearings, springs, fasteners, sensors, or materials, modif
 
 # Rig Overview
 
-![Rig Overview](Docs/Photos/Rig/Rig-Angled.jpg)
+![Rig Overview](Docs/Photos/Rig/DIY_Sim_Rig.jpeg)
 
 The simulator frame is a simple wood construction designed around affordability and rigidity.
 
@@ -109,7 +112,7 @@ Major systems include:
 
 # Direct Drive Wheel
 
-![Wheel](Docs/Photos/Wheel/Hoverboard-Motor.jpg)
+![Wheel](Docs/Photos/Rig/Cockpit_View.jpeg)
 
 ## Hardware
 
@@ -127,7 +130,7 @@ Major systems include:
 
 # Pedals
 
-![Pedals](Docs/Photos/Pedals/Pedals-Front.jpg)
+![Pedals](Docs/Photos/Pedals/Pedals.jpeg)
 
 ## Sensors
 
@@ -158,7 +161,7 @@ Major systems include:
 
 # H-Pattern Shifter
 
-![Shifter](Docs/Photos/Shifter/Shifter-Front.jpg)
+![Shifter](Docs/Photos/Shifter/Shifter.jpeg)
 
 The shifter was designed from scratch in CAD and developed around readily available hardware and linear motion components.
 
@@ -181,7 +184,9 @@ The shifter was designed from scratch in CAD and developed around readily availa
 
 # Electronics Architecture
 
-![Controller Box](Docs/Photos/Electronics/RJ45-Controller.jpg)
+![STM32 Wiring](Docs/Photos/Electronics/STM32_Wiring.jpeg)
+
+![STM32 Assembly](Docs/Photos/Electronics/STM32_Prep.jpeg)
 
 The entire simulator is built around a STM32F407VET6 microcontroller and a modular RJ45 wiring system.
 
