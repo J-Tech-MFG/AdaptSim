@@ -1,16 +1,22 @@
-## Pedal Rumble Firmware
+# Pedal Rumble System
 
-The pedal rumble system uses SimHub's Arduino integration.
+## Hardware
 
-Controller:
 - Arduino Pro Micro
+- DRV8833 Dual H-Bridge Driver
+- 2x Xbox Controller Rumble Motors
+- 5V 2A USB Power Supply
 
-Firmware:
-- Generated and uploaded directly through SimHub
+## SimHub Configuration
 
-Configuration:
-- Device Type: Dual Motor Output
-- Motor 1: Brake Rumble
-- Motor 2: Throttle Rumble
+Device Type:
+- Dual Motor Output
 
-See SimHub documentation for firmware upload instructions.
+Outputs:
+- Motor 1 = Brake
+- Motor 2 = Throttle
+
+## Notes
+
+Firmware is generated and uploaded directly by SimHub.
+No custom Arduino code is required.
