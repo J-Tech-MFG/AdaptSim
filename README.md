@@ -1,168 +1,299 @@
 # AdaptSim
 
-> Open-source sim racing controls built from readily available hardware.
+### A modular DIY direct drive sim racing ecosystem built from accessible parts, custom CAD, and open-source hardware.
 
-AdaptSim is a DIY sim racing ecosystem built around the idea that you should be able to create high-quality sim hardware using components you already have access to.
+![Rig Overview](Docs/Photos/Rig/Rig-Front.jpg)
 
-Instead of requiring exact hardware kits, STEP files are provided so builders can adapt the designs to their own components and fabrication methods.
+![License](https://img.shields.io/github/license/J-Tech-MFG/AdaptSim)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![Firmware](https://img.shields.io/badge/Firmware-STM32-green)
+![CAD](https://img.shields.io/badge/CAD-STEP%20Files-orange)
+![SimHub](https://img.shields.io/badge/SimHub-Compatible-purple)
 
 ---
 
-## Features
+# Overview
 
-### Pedals
+AdaptSim is a DIY sim racing project centered around a custom STM32 controller, direct drive force feedback wheel, load-cell pedals, H-pattern shifter, pedal rumble system, and SimHub-powered wind simulation.
 
-- Load-cell brake pedal
-- 200kg load cell
-- HX711 amplifier
-- Hall-effect throttle
-- Hall-effect clutch
+The goal of this project was simple:
+
+> Build a high-performance simulator using affordable components, recycled hardware, 3D printed parts, and custom CAD rather than expensive proprietary equipment.
+
+Everything was designed around adaptability. The included STEP files are intended to be modified and customized to fit whatever hardware you have available.
+
+---
+
+# Design Philosophy
+
+AdaptSim is **not a kit**.
+
+The parts used in this build were largely chosen based on what I already had available. Because of that, exact hardware counts and dimensions may differ from your build.
+
+Instead of requiring exact replicas, the provided STEP files allow builders to:
+
+- Modify dimensions
+- Change mounting patterns
+- Use different hardware
+- Adapt electronics layouts
+- Customize ergonomics
+
+If you have different bearings, springs, fasteners, sensors, or materials, modify the CAD and make it your own.
+
+---
+
+# Features
+
+## Direct Drive Wheel
+
+- 350W Hoverboard Motor
+- 36V Rated Motor
+- 15 Pole Pair Configuration
+- MT6701 Magnetic Encoder
+- FFBeast Firmware
+- STM32-based controller
+- SimHub Compatible
+
+## Load Cell Pedals
+
+- Custom modified pedal design
+- 200kg load cell brake
+- HX711 load cell amplifier
 - KY-035 analog hall sensors
-- 8mm × 3mm neodymium magnets
+- Magnetic throttle and clutch sensing
+- Adjustable geometry
+- Adjustable pedal spacing
 
-### Shifter
+## H-Pattern Shifter
 
-- H-pattern shifter
-- 4x KW11-3Z-C limit switches
-- 8mm linear rods
-- LM8UU linear bearings
-- Fully printable construction
+- Fully custom CAD design
+- Magnetic centering mechanism
+- Reverse lockout
+- Limit switch gear detection
+- Serviceable design
 
-### Wheel
+## Modular Electronics
 
-- FFBeast direct drive wheel
-- 6.5" hoverboard motor
-- MT6701 magnetic encoder
-- 24V power system
+- STM32F407VET6 controller
+- RJ45 modular wiring system
+- Dedicated wheel port
+- Dedicated pedal port
+- Dedicated shifter port
+- Expansion port for future accessories
 
-### SimHub Integration
+## SimHub Integration
 
-- Dual pedal rumble
-- Wind simulation
-- Speed-based airflow
+- Dual pedal rumble motors
+- Speed-based wind simulation
 - Drafting effects
-- Wheel lock feedback
-- ABS feedback
-- Traction control feedback
-
-### Electronics
-
-- STM32F407VET6 USB controller
-- Modular RJ45 wiring
-- Arduino-based SimHub accessories
+- Left/right airflow effects
 
 ---
 
-## Philosophy
+# Rig Overview
 
-AdaptSim was designed around hardware I already had available.
+![Rig Overview](Docs/Photos/Rig/Rig-Angled.jpg)
 
-The goal is not to create a kit that requires exact part numbers.
+The simulator frame is a simple wood construction designed around affordability and rigidity.
 
-The goal is to provide adaptable CAD models that builders can modify to fit their own hardware.
+Major systems include:
 
-Because of this:
-
-- STEP files are provided
-- Hardware counts are approximate
-- Builders are encouraged to modify the designs
-- Alternative hardware is expected
+- Direct drive wheel
+- Load-cell pedals
+- H-pattern shifter
+- SimHub wind simulator
+- Pedal rumble feedback
+- STM32 controller system
 
 ---
 
-## Hardware Used
+# Direct Drive Wheel
 
-### Main Controller
+![Wheel](Docs/Photos/Wheel/Hoverboard-Motor.jpg)
 
-- STM32F407VET6 Black Board
+## Hardware
 
-### Pedals
+| Component | Description |
+|------------|-------------|
+| Motor | 6.5" Hoverboard Motor |
+| Rated Power | 350W |
+| Voltage | 36V |
+| Pole Pairs | 15 |
+| Encoder | MT6701 Magnetic Encoder |
+| Controller | FFBeast |
+| Power Supply | 24V 10A |
+
+---
+
+# Pedals
+
+![Pedals](Docs/Photos/Pedals/Pedals-Front.jpg)
+
+## Sensors
+
+### Throttle
+
+- KY-035 Analog Hall Sensor
+- 8mm x 3mm Neodymium Magnet
+
+### Clutch
+
+- KY-035 Analog Hall Sensor
+- 8mm x 3mm Neodymium Magnet
+
+### Brake
 
 - 200kg Load Cell
-- HX711 Amplifier
-- 2x KY-035 Hall Sensors
-- 2x 8mm × 3mm Neodymium Magnets
+- HX711 Amplifier Module
+
+## Construction
+
+- PETG Printed Components
 - 608 Bearings
-
-### Shifter
-
-- 4x KW11-3Z-C Limit Switches
-- LM8UU Bearings
-- 8mm Linear Rod
-
-### Wheel
-
-- 6.5" Hoverboard Motor
-- MT6701 Encoder
-- FFBeast Controller
-- 24V 10A Power Supply
+- M5 Threaded Rod
+- M6 Hardware
+- 5/16" Hardware
 
 ---
 
-## SimHub Pedal Rumble
+# H-Pattern Shifter
 
-### Controller
+![Shifter](Docs/Photos/Shifter/Shifter-Front.jpg)
 
-- Arduino Pro Micro
+The shifter was designed from scratch in CAD and developed around readily available hardware and linear motion components.
 
-### Driver
+## Hardware
 
-- DRV8833 Dual H-Bridge
-
-### Motors
-
-- 2x Xbox Controller Rumble Motors
-
-### Power
-
-- 5V 2A USB Supply
-
----
-
-## SimHub Wind Simulation
-
-### Controller
-
-- Arduino Pro Micro
-
-### Fans
-
-- 2x Thermalright TL-C12C PWM Fans
-
-### Power
-
-- 12V 1A Power Supply
-
-Features:
-
-- Vehicle speed airflow
-- Drafting effects
-- Left/right wind balancing
+| Qty | Component |
+|------|------------|
+| 4 | KW11-3Z-C Limit Switches |
+| Assorted | 8mm Linear Rod |
+| 4 | 8mm Linear Bearings |
+| Assorted | M3 Hardware |
+| Assorted | M4 Hardware |
+| Assorted | M6 Threaded Rod |
+| Assorted | M8 Threaded Rod |
+| Assorted | 5/16" Threaded Rod |
+| Assorted | Heat Set Inserts |
+| Assorted | Extension Springs |
 
 ---
 
-## Attribution
+# Electronics Architecture
 
-### Pedals
+![Controller Box](Docs/Photos/Electronics/RJ45-Controller.jpg)
 
-Based on:
+The entire simulator is built around a STM32F407VET6 microcontroller and a modular RJ45 wiring system.
+
+## Ports
+
+| Port | Function |
+|--------|----------|
+| Wheel | Wheel Controls |
+| Pedals | Pedal Sensors |
+| Shifter | Gear Detection |
+| Expansion | Future Accessories |
+
+Using RJ45 cabling allows easy serviceability and future expansion without rewiring the entire simulator.
+
+---
+
+# Pedal Rumble System
+
+## Hardware
+
+| Component | Description |
+|------------|-------------|
+| Controller | Arduino Pro Micro |
+| Driver | DRV8833 Dual H-Bridge |
+| Motors | Xbox Controller Rumble Motors (2x) |
+| Power Supply | 5V 2A USB Supply |
+
+## SimHub Effects
+
+- Wheel Slip
+- ABS Feedback
+- Wheel Lock
+- Engine Vibration
+- Road Impacts
+
+---
+
+# Wind Simulation
+
+## Hardware
+
+| Component | Description |
+|------------|-------------|
+| Controller | Arduino Pro Micro |
+| Fans | Thermalright TL-C12C PWM |
+| Quantity | 2 |
+| Voltage | 12V |
+| Speed | 1550 RPM |
+| Power Supply | 12V 1A |
+
+## SimHub Effects
+
+- Vehicle Speed
+- Airflow Curving
+- Drafting Effects
+
+---
+
+# CAD Files
+
+The repository includes STEP files for:
+
+- Pedals
+- H-Pattern Shifter
+- STM32 Controller Enclosure
+
+Only STEP files are provided.
+
+This allows builders to import and modify the designs in virtually any CAD software.
+
+---
+
+# Credits
+
+## Pedal Design Inspiration
+
+This project began with the excellent pedal design by:
 
 https://www.printables.com/model/1394243-sim-racing-pedals-with-load-cell-v2
 
-The original STEP files were used as a starting point and modified extensively.
-
-### Shifter Inspiration
-
-Inspired by:
-
-https://dazprojects.com/products/h-shifter-3d-models
-
-No CAD files, models, or drawings from that project were used.
-
-The shifter included here was modeled independently from scratch.
+The pedal assemblies in this repository are heavily modified versions adapted to fit this simulator's specific requirements.
 
 ---
 
-## License
+## Shifter Inspiration
 
-See LICENSE for details.
+The shifter was inspired by:
+
+https://dazprojects.com/products/h-shifter-3d-models
+
+No files, models, or CAD data were purchased, downloaded, or reused. The design included here was created independently from scratch.
+
+---
+
+## Wind Simulator Inspiration
+
+The wind simulator concept and mounting design were inspired by:
+
+https://makerworld.com/en/models/1561872-3d-printed-wind-simulator-kit-for-sim-racing
+
+I used their design as inspiration for fan mounting and airflow implementation.
+
+The enclosure and electronics implementation in this project were redesigned around an Arduino Pro Micro rather than the original Arduino Uno configuration.
+
+Their files are **not included** in this repository. Please visit their page directly if you'd like to build their original design.
+
+---
+
+# License
+
+This project is released under the MIT License.
+
+Build it. Modify it. Improve it. Share it.
+
+🏁
