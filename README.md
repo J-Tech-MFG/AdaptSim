@@ -281,17 +281,19 @@ No files, models, or CAD data were purchased, downloaded, or reused. The design 
 
 ---
 
-## Wind Simulator Inspiration
+## Wind Simulator Credits
 
-The wind simulator concept and mounting design were inspired by:
+The wind simulator used in this project is based on the excellent design created by:
 
 https://makerworld.com/en/models/1561872-3d-printed-wind-simulator-kit-for-sim-racing
 
-I used their design as inspiration for fan mounting and airflow implementation.
+I used their printed fan mounts and wind simulation design directly in my build because it is a well-designed and easy-to-implement solution.
 
-The enclosure and electronics implementation in this project were redesigned around an Arduino Pro Micro rather than the original Arduino Uno configuration.
+The only significant modification was the electronics enclosure and controller implementation. Instead of the original Arduino Uno based design, this project uses an Arduino Pro Micro integrated into the overall AdaptSim electronics ecosystem.
 
-Their files are **not included** in this repository. Please visit their page directly if you'd like to build their original design.
+The original creator's files are not included in this repository. If you would like to build the wind simulator, please visit their MakerWorld page and download the files directly from the original source.
+
+Thank you to the original designer for making the project available to the community.
 
 ---
 
